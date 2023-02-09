@@ -34,7 +34,7 @@ const limiter = rateLimit({
 
 // DB connection
 const URI = process.env.DATABASE;
-const OPTION = {user:'', pass:'', autoIndex:true};
+const OPTION = {user:'crud55', pass:'551905', autoIndex:true};
 mongoose.connect(URI, OPTION, (err)=>{
     console.log('DB connected');
     console.log(err);
