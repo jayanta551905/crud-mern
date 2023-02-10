@@ -6,7 +6,6 @@ const mongoose = require('mongoose');
 const path = require('path');
 
 
-
 // security middleware
 const helmet = require('helmet');
 const cors = require('cors');
@@ -40,14 +39,18 @@ mongoose.connect(URI, OPTION, (err)=>{
     console.log(err);
 });
 
+
+
 //router version
 app.use("/api/v1", router);
 
 
 // Add React Front End Routing
-app.get('*',function (req,res) {
-    res.sendFile(path.resolve(__dirname,'client','build','index.html'))
+app.get("*", function (req, res) {
+    res.sendFile(path.resolve(__dirname, 'client','build','index.html'))
 })
+
+
 
 
 
